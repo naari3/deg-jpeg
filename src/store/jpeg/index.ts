@@ -1,5 +1,5 @@
 export type Jpeg = {
-  file: File | null;
+  url: string;
   quality: number;
 };
 

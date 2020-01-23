@@ -3,14 +3,14 @@ import { isType } from "typescript-fsa";
 import { produce } from "immer";
 
 import { Jpeg } from "..";
-import { ChangeImage, ChangeQuality } from "..";
+import { ChangeImageUrl, ChangeQuality } from "..";
 
-const initialState: Jpeg = { file: null, quality: 1.0 };
+const initialState: Jpeg = { url: "", quality: 1.0 };
 
 export const reducer: Reducer<Jpeg> = (state = initialState, action) => {
-  if (isType(action, ChangeImage)) {
+  if (isType(action, ChangeImageUrl)) {
     return produce(state, draft => {
-      draft.file = action.payload.file;
+      draft.url = action.payload.url;
     });
   }
   if (isType(action, ChangeQuality)) {

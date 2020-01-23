@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Jpeg as JpegType, ChangeImageUrl, GetJpeg } from "./store/jpeg";
 
 const ImageFileLoader: React.FC = () => {
-  const [, setImgSrc] = useState("");
+  const dispatch = useDispatch();
+
+  const jpeg = useSelector(GetJpeg);
 
   return (
     <div className="ImageFileLoader">
@@ -11,8 +15,9 @@ const ImageFileLoader: React.FC = () => {
           if (e.target.files === null) return;
 
           const file = e.target.files[0];
-          const src = URL.createObjectURL(file);
-          setImgSrc(src);
+          const url = URL.createObjectURL(file);
+
+          dispatch(ChangeImageUrl({ url }));
         }}
       />
     </div>
