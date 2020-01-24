@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "84cd4f52f18bee6271f1d073209012cc",
+    "revision": "16b41150014d455f3c9f0b956ddc0799",
     "url": "/deg-jpeg/index.html"
   },
   {
-    "revision": "fd5a09b69eb266eaf73a",
+    "revision": "d0271e5f5716f7c02f31",
     "url": "/deg-jpeg/static/css/main.d1b05096.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/deg-jpeg/static/js/2.12f0a34d.chunk.js.LICENSE"
   },
   {
-    "revision": "fd5a09b69eb266eaf73a",
-    "url": "/deg-jpeg/static/js/main.ec79cc8e.chunk.js"
+    "revision": "d0271e5f5716f7c02f31",
+    "url": "/deg-jpeg/static/js/main.4e1c290e.chunk.js"
   },
   {
     "revision": "2c7902e8d3ed75d95135",
