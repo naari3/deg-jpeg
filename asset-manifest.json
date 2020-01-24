@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/deg-jpeg/static/css/main.d1b05096.chunk.css",
-    "main.js": "/deg-jpeg/static/js/main.e710c5df.chunk.js",
-    "main.js.map": "/deg-jpeg/static/js/main.e710c5df.chunk.js.map",
+    "main.js": "/deg-jpeg/static/js/main.4ab8dd79.chunk.js",
+    "main.js.map": "/deg-jpeg/static/js/main.4ab8dd79.chunk.js.map",
     "runtime-main.js": "/deg-jpeg/static/js/runtime-main.37b1b19d.js",
     "runtime-main.js.map": "/deg-jpeg/static/js/runtime-main.37b1b19d.js.map",
     "static/js/2.24f679b2.chunk.js": "/deg-jpeg/static/js/2.24f679b2.chunk.js",
     "static/js/2.24f679b2.chunk.js.map": "/deg-jpeg/static/js/2.24f679b2.chunk.js.map",
     "index.html": "/deg-jpeg/index.html",
-    "precache-manifest.7fda0c9b7c91b7f8d7e87112c3348957.js": "/deg-jpeg/precache-manifest.7fda0c9b7c91b7f8d7e87112c3348957.js",
+    "precache-manifest.40f30153363c1c53a4f7f24a3a2ec0dd.js": "/deg-jpeg/precache-manifest.40f30153363c1c53a4f7f24a3a2ec0dd.js",
     "service-worker.js": "/deg-jpeg/service-worker.js",
     "static/css/main.d1b05096.chunk.css.map": "/deg-jpeg/static/css/main.d1b05096.chunk.css.map",
     "static/js/2.24f679b2.chunk.js.LICENSE": "/deg-jpeg/static/js/2.24f679b2.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.37b1b19d.js",
     "static/js/2.24f679b2.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.e710c5df.chunk.js"
+    "static/js/main.4ab8dd79.chunk.js"
   ]
 }
