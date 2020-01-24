@@ -1,6 +1,7 @@
-export type Jpeg = {
+export type Status = {
   url: string;
   quality: number;
+  jpegs: string[];
 };
 
 export * from "./actions";

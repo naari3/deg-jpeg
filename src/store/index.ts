@@ -1,9 +1,9 @@
 import { combineReducers, createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 
-import jpeg from "./jpeg";
+import status from "./status";
 
-const reducers = combineReducers({ jpeg });
+const reducers = combineReducers({ status });
 
 export const Store = createStore(reducers, composeWithDevTools());
 
