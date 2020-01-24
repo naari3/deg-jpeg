@@ -1,5 +1,6 @@
 {
   "name": "deg-jpeg",
+  "homepage": "https://naari3.github.io/deg-jpeg",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
