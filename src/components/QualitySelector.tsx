@@ -23,7 +23,7 @@ const QualitySelector: React.FC = () => {
     <input
       type="range"
       defaultValue={status.quality}
-      min={0.01}
+      min={0.0}
       max={1.0}
       step={0.01}
       onChange={e => {

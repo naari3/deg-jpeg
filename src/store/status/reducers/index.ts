@@ -5,7 +5,7 @@ import { produce } from "immer";
 import { Status } from "..";
 import { ChangeImageUrl, ChangeQuality, AddJpeg, ChangeJpegSet } from "..";
 
-const initialState: Status = { url: "", quality: 1.0, jpegs: [] };
+const initialState: Status = { url: "", quality: 0.92, jpegs: [] };
 
 export const reducer: Reducer<Status> = (state = initialState, action) => {
   if (isType(action, ChangeImageUrl)) {
