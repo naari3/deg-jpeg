@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Status } from "../store/status";
 import { useJpeg } from "../useJpeg";
 
 const Previewer: React.FC = () => {
