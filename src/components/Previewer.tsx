@@ -6,12 +6,12 @@ const Previewer: React.FC = () => {
   const [status, getJpeg, loading] = useJpeg();
 
   useEffect(() => {
-    (getJpeg as Function)();
+    getJpeg();
   }, [getJpeg]);
 
   return (
     <div className="Previewer">
-      <img src={(status as Status).jpegs.slice(-1)[0]} alt="" />
+      <img src={status.jpegs.slice(-1)[0]} alt="" />
       <p>{loading ? "loading" : "　"}</p>
     </div>
   );

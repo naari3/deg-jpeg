@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { GetStatus, ChangeJpegSet } from "./store/status";
+import { Status, GetStatus, ChangeJpegSet } from "./store/status";
 
 const loadImage = (src: string) => {
   return new Promise<HTMLImageElement>((resolve, reject) => {
@@ -21,7 +21,7 @@ const createJpeg = async (src: string, quality: number) => {
   return canvas.toDataURL("image/jpeg", quality);
 };
 
-export const useJpeg = () => {
+export const useJpeg = (): [Status, () => Promise<void>, boolean, string] => {
   const dispatch = useDispatch();
 
   const [loading, setLoading] = useState(false);
