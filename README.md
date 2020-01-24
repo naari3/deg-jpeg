@@ -2,6 +2,8 @@
 
 We love degradated images
 
+hosted on [https://naari3.github.io/deg-jpeg/](https://naari3.github.io/deg-jpeg/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
