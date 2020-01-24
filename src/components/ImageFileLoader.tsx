@@ -1,11 +1,9 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Jpeg as JpegType, ChangeImageUrl, GetJpeg } from "./store/jpeg";
+import { useDispatch } from "react-redux";
+import { ChangeImageUrl } from "../store/status";
 
 const ImageFileLoader: React.FC = () => {
   const dispatch = useDispatch();
-
-  const jpeg = useSelector(GetJpeg);
 
   return (
     <div className="ImageFileLoader">
