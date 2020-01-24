@@ -10,3 +10,6 @@ export const AddJpeg = actionCreator<{ src: string }>("ADD_JPEG");
 export const ChangeJpegSet = actionCreator<{ srces: string[] }>(
   "CHANGE_JPEG_SET"
 );
+export const ChangeFilename = actionCreator<{ filename: string }>(
+  "CHANGE_FILENAME"
+);

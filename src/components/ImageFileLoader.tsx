@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { ChangeImageUrl } from "../store/status";
+import { ChangeImageUrl, ChangeFilename } from "../store/status";
 
 const ImageFileLoader: React.FC = () => {
   const dispatch = useDispatch();
@@ -20,8 +20,10 @@ const ImageFileLoader: React.FC = () => {
           }
 
           const url = URL.createObjectURL(file);
+          const filename = file.name;
 
           dispatch(ChangeImageUrl({ url }));
+          dispatch(ChangeFilename({ filename }));
         }}
       />
     </div>

@@ -3,9 +3,20 @@ import { isType } from "typescript-fsa";
 import { produce } from "immer";
 
 import { Status } from "..";
-import { ChangeImageUrl, ChangeQuality, AddJpeg, ChangeJpegSet } from "..";
+import {
+  ChangeImageUrl,
+  ChangeQuality,
+  AddJpeg,
+  ChangeJpegSet,
+  ChangeFilename
+} from "..";
 
-const initialState: Status = { url: "", quality: 0.92, jpegs: [] };
+const initialState: Status = {
+  url: "",
+  quality: 0.92,
+  jpegs: [],
+  filename: ""
+};
 
 export const reducer: Reducer<Status> = (state = initialState, action) => {
   if (isType(action, ChangeImageUrl)) {
@@ -26,6 +37,11 @@ export const reducer: Reducer<Status> = (state = initialState, action) => {
   if (isType(action, ChangeJpegSet)) {
     return produce(state, draft => {
       draft.jpegs = action.payload.srces.map(s => s);
+    });
+  }
+  if (isType(action, ChangeFilename)) {
+    return produce(state, draft => {
+      draft.filename = action.payload.filename;
     });
   }
   return state;

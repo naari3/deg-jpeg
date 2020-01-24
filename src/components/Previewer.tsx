@@ -8,9 +8,21 @@ const Previewer: React.FC = () => {
     getJpeg();
   }, [getJpeg]);
 
+  const tmpfilename = status.filename.split(".");
+  tmpfilename.splice(-1, 0, `-${status.quality}`);
+  const filename = [
+    tmpfilename.slice(0, -1).join(""),
+    tmpfilename.slice(-1)
+  ].join(".");
+
+  const src = status.jpegs.slice(-1)[0];
+
   return (
     <div className="Previewer">
-      <img src={status.jpegs.slice(-1)[0]} alt="" />
+      <a href={src} download={filename}>
+        <img src={src} alt={status.filename} style={{ maxWidth: "100%" }} />
+      </a>
+      {src ? <p>画像クリックでだうんろーどできます</p> : <></>}
       <p>{loading ? "loading" : "　"}</p>
     </div>
   );
