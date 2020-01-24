@@ -31,14 +31,14 @@ export const useJpeg = () => {
   const getJpeg = useCallback(async () => {
     setLoading(true);
     try {
-      // const src = await createJpeg(status.url, status.quality);
-      const srces = await ["", "", "", ""].reduce(async prarr => {
-        const arr = await prarr;
-        arr.push(await createJpeg(arr.slice(-1)[0], status.quality));
-        return arr;
-      }, Promise.resolve([status.url]));
+      const srces = await Array.from({ length: 10 })
+        .map(() => "")
+        .reduce(async prarr => {
+          const arr = await prarr;
+          arr.push(await createJpeg(arr.slice(-1)[0], status.quality));
+          return arr;
+        }, Promise.resolve([status.url]));
 
-      // dispatch(AddJpeg({ src }));
       setLoading(false);
 
       dispatch(ChangeJpegSet({ srces }));

@@ -11,9 +11,7 @@ const Previewer: React.FC = () => {
 
   return (
     <div className="Previewer">
-      {(status as Status).jpegs.map((jpg, i) => {
-        return <img src={jpg} alt="" key={i} />;
-      })}
+      <img src={(status as Status).jpegs.slice(-1)[0]} alt="" />
     </div>
   );
 };
