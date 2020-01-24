@@ -10,10 +10,7 @@ const Previewer: React.FC = () => {
 
   const tmpfilename = status.filename.split(".");
   tmpfilename.splice(-1, 0, `-${status.quality}`);
-  const filename = [
-    tmpfilename.slice(0, -1).join(""),
-    tmpfilename.slice(-1)
-  ].join(".");
+  const filename = [tmpfilename.slice(0, -1).join(""), "jpg"].join(".");
 
   const src = status.jpegs.slice(-1)[0];
 
