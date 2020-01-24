@@ -3,7 +3,7 @@ import { Status } from "../store/status";
 import { useJpeg } from "../useJpeg";
 
 const Previewer: React.FC = () => {
-  const [status, getJpeg] = useJpeg();
+  const [status, getJpeg, loading] = useJpeg();
 
   useEffect(() => {
     (getJpeg as Function)();
@@ -12,6 +12,7 @@ const Previewer: React.FC = () => {
   return (
     <div className="Previewer">
       <img src={(status as Status).jpegs.slice(-1)[0]} alt="" />
+      <p>{loading ? "loading" : "　"}</p>
     </div>
   );
 };
