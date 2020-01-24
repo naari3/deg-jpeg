@@ -31,7 +31,12 @@ export const useJpeg = (): [Status, () => Promise<void>, boolean, string] => {
   const getJpeg = useCallback(async () => {
     setLoading(true);
     try {
-      const srces = await Array.from({ length: 10 })
+      let dups = 5;
+      const d = new URL(window.location.href).searchParams.get("d");
+      if (d) {
+        dups = parseInt(d) || 5;
+      }
+      const srces = await Array.from({ length: dups })
         .map(() => "")
         .reduce(async prarr => {
           const arr = await prarr;
