@@ -26,7 +26,7 @@ const QualitySelector: React.FC = () => {
       min={0.0}
       max={1.0}
       step={0.01}
-      onChange={e => {
+      onChange={(e) => {
         const currentQuality = parseFloat(e.target.value);
         setCurrentQuality(currentQuality);
       }}

@@ -13,8 +13,14 @@ import { buildInputFile, call } from "wasm-imagemagick";
 // };
 
 const createJpeg = async (src: string, quality: number) => {
-  const imgSrc = await buildInputFile(src, 'image1.png');
-  const command = ["convert", imgSrc.name, '-quality', `${Math.floor((quality || 0.01) * 100)}`, 'out.jpeg'];
+  const imgSrc = await buildInputFile(src, "image1.png");
+  const command = [
+    "convert",
+    imgSrc.name,
+    "-quality",
+    `${Math.floor((quality || 0.01) * 100)}`,
+    "out.jpeg",
+  ];
   const result = await call([imgSrc], command);
   const file = result.outputFiles[0];
   return URL.createObjectURL(file.blob);
@@ -45,7 +51,7 @@ export const useJpeg = (): [Status, () => Promise<void>, boolean, string] => {
       }
       const srces = await Array.from({ length: dups })
         .map(() => "")
-        .reduce(async prarr => {
+        .reduce(async (prarr) => {
           const arr = await prarr;
           arr.push(await createJpeg(arr.slice(-1)[0], status.quality));
           return arr;

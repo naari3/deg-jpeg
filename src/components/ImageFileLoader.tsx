@@ -9,7 +9,7 @@ const ImageFileLoader: React.FC = () => {
     <div className="ImageFileLoader">
       <input
         type="file"
-        onChange={e => {
+        onChange={(e) => {
           if (e.target.files === null) return;
 
           const file = e.target.files[0];
