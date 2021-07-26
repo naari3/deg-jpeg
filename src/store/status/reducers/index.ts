@@ -13,7 +13,7 @@ import {
 
 const initialState: Status = {
   url: "",
-  quality: 0.92,
+  quality: 92,
   jpegs: [],
   filename: "",
 };

@@ -20,17 +20,31 @@ const QualitySelector: React.FC = () => {
   }, [currentQuality, previousQuality, dispatch]);
 
   return (
-    <input
-      type="range"
-      defaultValue={status.quality}
-      min={0.0}
-      max={1.0}
-      step={0.01}
-      onChange={(e) => {
-        const currentQuality = parseFloat(e.target.value);
-        setCurrentQuality(currentQuality);
-      }}
-    />
+    <>
+      <input
+        type="range"
+        value={currentQuality}
+        min={1}
+        max={100}
+        step={1}
+        style={{ width: "300px" }}
+        onChange={(e) => {
+          const currentQuality = parseFloat(e.target.value);
+          setCurrentQuality(currentQuality);
+        }}
+      />
+      <input
+        type="number"
+        value={currentQuality}
+        min={1}
+        max={100}
+        step={1}
+        onChange={(e) => {
+          const currentQuality = parseFloat(e.target.value);
+          setCurrentQuality(currentQuality);
+        }}
+      />
+    </>
   );
 };
 

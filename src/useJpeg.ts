@@ -18,7 +18,7 @@ const createJpeg = async (src: string, quality: number) => {
     "convert",
     imgSrc.name,
     "-quality",
-    `${Math.floor((quality || 0.01) * 100)}`,
+    `${quality}`,
     "out.jpeg",
   ];
   const result = await call([imgSrc], command);

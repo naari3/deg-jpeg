@@ -20,7 +20,7 @@ const Previewer: React.FC = () => {
         <img src={src} alt={status.filename} style={{ maxWidth: "100%" }} />
       </a>
       {src ? <p>画像クリックでだうんろーどできます</p> : <></>}
-      <p>{loading ? "loading" : "　"}</p>
+      <p>{loading ? "　loading　" : "　"}</p>
     </div>
   );
 };
