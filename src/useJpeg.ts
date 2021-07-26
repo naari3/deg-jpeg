@@ -49,13 +49,16 @@ export const useJpeg = (): [Status, () => Promise<void>, boolean, string] => {
       if (d) {
         dups = parseInt(d) || 1;
       }
-      const srces = await Array.from({ length: dups })
-        .map(() => "")
-        .reduce(async (prarr) => {
-          const arr = await prarr;
-          arr.push(await createJpeg(arr.slice(-1)[0], status.quality));
-          return arr;
-        }, Promise.resolve([status.url]));
+      let srces = [] as string[];
+      if (status.url) {
+        srces = await Array.from({ length: dups })
+          .map(() => "")
+          .reduce(async (prarr) => {
+            const arr = await prarr;
+            arr.push(await createJpeg(arr.slice(-1)[0], status.quality));
+            return arr;
+          }, Promise.resolve([status.url]));
+      }
 
       setLoading(false);
 
